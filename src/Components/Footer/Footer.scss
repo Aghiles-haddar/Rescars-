@@ -46,3 +46,52 @@
         }
     }
 }
+
+
+@media screen and (min-width:520px){
+    .footer{
+        .footerContainer{
+            .footerMenuDiv{
+                grid-template-columns: repeat(2,1fr);
+
+                .singleGrid{
+                    .footerTitle{
+                        font-size: 17px;
+                    }
+
+                    .footerUl{
+                        color: var(--textColor);
+                    }
+                }
+            }
+        }
+
+        .lowerSection{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+@media screen and (min-width:770px){
+    .footer{
+        .footerContainer{
+            .footerMenuDiv{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    }
+}
+
+@media screen and (min-width:940px){
+    .footer{
+        .footerContainer{
+            padding: 2rem 0;
+            .footerMenuDiv{
+                grid-template-columns: repeat(4,1fr);
+            }
+        }
+    }
+}

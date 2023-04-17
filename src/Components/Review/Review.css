@@ -41,6 +41,8 @@
 .review .secContainer .reviewContainer .singleReview .imgDiv img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .review .secContainer .reviewContainer .singleReview .reviewTitle {
   color: var(--blackColor);
@@ -69,6 +71,8 @@
   overflow: hidden;
   border-radius: 50%;
   box-shadow: 0 4px 5px rgb(222, 222, 222);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .review .secContainer .reviewContainer .singleReview .reviewDiv .leftDiv .aboutReviewer .name {
   color: var(--blackColor);
@@ -97,4 +101,53 @@
 }
 .review .secContainer .reviewContainer .singleReview:hover .imgDiv {
   border: 5px solid var(--primaryColor);
+}
+
+@media screen and (min-width: 520px) {
+  .review .secContainer .secHeading {
+    margin-top: 1rem;
+  }
+  .review .secContainer .secHeading .secTitle {
+    font-size: 23px;
+  }
+  .review .secContainer .secHeading .navBtns {
+    gap: 0.5rem;
+  }
+  .review .secContainer .secHeading .navBtns .icon {
+    font-size: 25px;
+  }
+  .review .secContainer .reviewContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .review .secContainer .reviewContainer .singleReview .reviewTitle {
+    font-size: 18px;
+  }
+  .review .secContainer .reviewContainer .singleReview .desc {
+    font-size: 16px;
+  }
+  .review .secContainer .reviewContainer .singleReview .reviewDiv .leftDiv .aboutReviewer .name {
+    font-size: 17px;
+  }
+  .review .secContainer .reviewContainer .singleReview .reviewDiv .leftDiv .aboutReviewer p {
+    font-size: 16px;
+  }
+  .review .secContainer .reviewContainer .singleReview .reviewDiv .rightDiv .icon {
+    font-size: 16px;
+  }
+  .review .secContainer .reviewContainer .singleReview .reviewDiv .rightDiv blockquote {
+    font-weight: 600;
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .review .secContainer .secHeading .secTitle {
+    font-size: 28px;
+  }
+  .review .secContainer .secHeading .navBtns {
+    gap: 1rem;
+    background-color: red;
+  }
+  .review .secContainer .reviewContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }/*# sourceMappingURL=Review.css.map */

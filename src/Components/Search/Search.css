@@ -42,4 +42,16 @@
 }
 .search .searchDiv .btn .icon {
   font-size: 15px;
+}
+
+@media screen and (min-width: 520px) {
+  .search .title {
+    font-size: 25px;
+    padding: 2rem 0;
+  }
+  .search .searchDiv input {
+    padding: 10px;
+    font-weight: 600;
+    color: var(--primaryColor);
+  }
 }/*# sourceMappingURL=Search.css.map */

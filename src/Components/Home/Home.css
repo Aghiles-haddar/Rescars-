@@ -17,6 +17,9 @@
   display: grid;
   gap: 2rem;
 }
+.secContainer .homeImage img {
+  transform: scale(1);
+}
 .secContainer .homeText .homeSpan {
   font-size: 15px;
   color: var(--blackColor);

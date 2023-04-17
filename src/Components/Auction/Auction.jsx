@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Auction.css'
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
@@ -8,8 +8,25 @@ import camaro from '../../images/camaro.png'
 import rs7 from '../../images/rs7.png'
 import bmw from '../../images/bmw.png'
 import porche from '../../images/porche.png'
+import mercedes from '../../images/mercedes.png'
+import bmw2 from '../../images/bmw2.png'
+import dodge2 from '../../images/dodge2.png'
+
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const Auction = () => {
+
+
+    useEffect(()=>{
+        Aos.init(
+            {
+                duration: 1000
+            }
+        )
+        }, [])
+
+
     return (
         <div className="auction section">
             <div className="secContainer container">
@@ -29,7 +46,7 @@ const Auction = () => {
                     {/* Car one */}
                     <div className="singleCar grid">
                         <div className="imgDiv">
-                            <img src={Dodge} alt="" />
+                            <img src={dodge2} alt="" />
                         </div>
                         <h5 className="carTitle">
                             Used 2019 Audi S4 Premium Plus
@@ -149,7 +166,7 @@ const Auction = () => {
                     {/* Car one */}
                     <div className="singleCar grid">
                         <div className="imgDiv">
-                            <img src={Urus} alt="" />
+                            <img src={mercedes} alt="" />
                         </div>
                         <h5 className="carTitle">
                             Used 2019 Audi S4 Premium Plus
@@ -173,7 +190,7 @@ const Auction = () => {
                     {/* Car one */}
                     <div className="singleCar grid singleCarActive">
                         <div className="imgDiv">
-                            <img src={Urus} alt="" />
+                            <img src={bmw2} alt="" />
                         </div>
                         <h5 className="carTitle">
                             Used 2019 Audi S4 Premium Plus

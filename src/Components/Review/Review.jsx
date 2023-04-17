@@ -5,8 +5,14 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import Urus from '../../images/urus.png'
 
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 
 const Review = () => {
+
+    
+
     return (
         <div className="review section">
             <div className="secContainer container">

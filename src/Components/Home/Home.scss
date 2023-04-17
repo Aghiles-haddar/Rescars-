@@ -17,6 +17,11 @@
     display: grid;
     gap: 2rem;
 
+    .homeImage{
+        img{
+            transform: scale(1);
+        }
+    }
     .homeText{
         .homeSpan{
             font-size: 15px;

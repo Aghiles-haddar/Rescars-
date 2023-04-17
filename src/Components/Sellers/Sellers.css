@@ -45,4 +45,31 @@
   padding: 10px;
   border-radius: 3px;
   background: rgb(223, 223, 223);
+}
+
+@media screen and (min-width: 520px) {
+  .sellers .secContainer .secHeading {
+    margin-top: 2rem;
+  }
+  .sellers .secContainer .secHeading .secTitle {
+    font-size: 25px;
+  }
+  .sellers .secContainer .secHeading p {
+    font-size: 18px;
+  }
+  .sellers .secContainer .sellersContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .sellers .secContainer .sellersContainer .singleSeller {
+    gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 840px) {
+  .sellers .secContainer .secHeading .secTitle {
+    font-size: 25px;
+  }
+  .sellers .secContainer .secHeading p {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=Sellers.css.map */

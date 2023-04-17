@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Trending.css'
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import Urus from '../../images/urus.png'
 
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 
 const Trending = () => {
+
+    useEffect(()=>{
+        Aos.init(
+            {
+                duration: 1000
+            }
+        )
+        }, [])
+
     return (
         <div className="trending section">
             <div className="secContainer container">
-                <div className="secHeading flex">
-                    <h3 className="secTitle">
+                <div data-aos='fade-up' className="secHeading flex">
+                    <h3 data-aos='fade-up' className="secTitle">
                         Trending Near You
                     </h3>
 
@@ -23,7 +35,7 @@ const Trending = () => {
                 <div className="carContainer grid">
                     {/* Signle Car */}
                     {/* Car one */}
-                    <div className="singleCar grid">
+                    <div data-aos='fade-up' data-aos-duration='2000' className="singleCar grid">
                         <div className="imgDiv">
                             <img src={Urus} alt="" />
                         </div>
@@ -47,7 +59,7 @@ const Trending = () => {
                     </div>
 
                     {/* Car one */}
-                    <div className="singleCar grid">
+                    <div data-aos='fade-up' data-aos-duration='2500' className="singleCar grid">
                         <div className="imgDiv">
                             <img src={Urus} alt="" />
                         </div>
@@ -71,7 +83,7 @@ const Trending = () => {
                     </div>
 
                     {/* Car one */}
-                    <div className="singleCar grid">
+                    <div data-aos='fade-up' data-aos-duration='3000' className="singleCar grid">
                         <div className="imgDiv">
                             <img src={Urus} alt="" />
                         </div>
