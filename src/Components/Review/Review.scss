@@ -1,0 +1,121 @@
+:root{
+    --primaryColor: #7a63f1;
+    --secondaryColor: #ebe8fc;
+    --textColor: #a3a3a3;
+    --greyColor: #f4f4f4;
+    --whiteColor: #f5f4fa;
+    --blackColor: #4343344;
+}
+
+.review{
+    .secContainer{
+        .secHeading{
+            justify-content: space-between;
+            padding: 1rem 0;
+
+            .navBtns{
+                gap: .5rem;
+                .icon{
+                    padding: 3px 5px;
+                    background: var(--secondaryColor);
+                    border-radius: 3px;
+                    font-size: 30px;
+                    cursor: pointer;
+                    &:hover{
+                        background: var(--primaryColor);
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+        }
+        .reviewContainer{
+            gap: 1.5rem;
+
+            .singleReview{
+                transition: .3s ease-in-out;
+
+                .imgDiv{
+                    height: 200px;
+                    width: 100%;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    border: 5px solid transparent;
+
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                .reviewTitle{
+                    color: var(--blackColor);
+                    font-size: 16px;
+                    padding-top: 10px;
+                    text-align: left;
+                }
+
+                .desc{
+                    color: var(--blackColor);
+                    opacity: .7;
+                    font-size: 14px;
+                    text-align: left;
+                }
+
+                .reviewDiv{
+                    justify-content: space-between;
+                    margin-top: 1rem;
+                    align-items: flex-start;
+
+                    .leftDiv{
+                        gap: .8rem;
+
+                        .reviewerImage{
+                            border: 2px solid var(--whiteColor);
+                            height: 40px;
+                            width: 40px;
+                            overflow: hidden;
+                            border-radius: 50%;
+                            box-shadow: 0 4px 5px rgb(222,222,222);
+                        }
+
+                        .aboutReviewer{
+                            .name{
+                                color: var(--blackColor);
+                                font-weight: 600;
+                                padding-bottom: .5rem;
+                                font-size: 15px;
+                                text-align: left;
+                            }
+
+                            p{
+                                color: var(--textColor);
+                                font-size: 14px;
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                    .rightDiv{
+                        gap: .3rem;
+                        .icon{
+                            color: rgb(255,165,0);
+                        }
+                        blockquote{
+                            font-weight: 600;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                &:hover{
+                    transform: translateY(-7px);
+                    .imgDiv{
+                        border: 5px solid var(--primaryColor);
+                    }
+                }    
+
+
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+:root{
+    --primaryColor: #7a63f1;
+    --secondaryColor: #ebe8fc;
+    --textColor: #a3a3a3;
+    --greyColor: #f4f4f4;
+    --whiteColor: #f5f4fa;
+    --blackColor: #4343344;
+}
+
+.search{
+    padding: 2rem 0;
+    .title{
+        color: var(--blackColor);
+        font-size: 22px;
+        padding: 1rem 0;
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.7rem;
+    }
+    .searchDiv{
+        gap: .5rem;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+
+        input{
+            border-radius: 10px;
+            border: 1px solid var(--secondaryColor);
+            padding: 5px 10px;
+            outline: none;
+            width: 100%;
+            
+            &:focus{
+                border: none;
+                border: 1px solid var(--primaryColor);
+            }
+        }
+
+        .btn{
+            justify-content: center;
+            width: 100%;
+            align-self: center;
+            gap: .3rem;
+
+            .icon{
+                font-size: 15px;
+            }
+        }
+    }
+}

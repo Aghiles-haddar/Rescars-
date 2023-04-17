@@ -1,0 +1,96 @@
+:root{
+    --primaryColor: #7a63f1;
+    --secondaryColor: #ebe8fc;
+    --textColor: #a3a3a3;
+    --greyColor: #f4f4f4;
+    --whiteColor: #f5f4fa;
+    --blackColor: #4343344;
+}
+
+.trending{
+    .secContainer{
+        .secHeading{
+            justify-content: space-between;
+            padding: 1rem 0;
+
+            .navBtns{
+                gap: .5rem;
+
+                .icon{
+                    padding: 3px 5px;
+                    background: var(--secondaryColor);
+                    border-radius: 3px;
+                    font-size: 30px;
+                    cursor: pointer;
+
+                    &:hover{
+                    background: var(--primaryColor);
+                    color: var(--whiteColor);
+                    }
+                }
+            }    
+        }
+        .carContainer{
+            gap: 2rem;
+
+            .singleCar{
+                transition: .3s ease-in-out;
+                text-align: left;
+                .imgDiv{
+                    height: 200px;
+                    width: 100%;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    border: 5px solid transparent;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .carTitle{
+                    color: var(--blackColor);
+                    padding-top: 10px;
+                    font-size: 15px;
+                }
+                .miles{
+                    color: var(--blackColor);
+                    font-size: 14px;
+                    opacity: .7;
+                }
+                .AWD{
+                    padding: 1rem 0;
+                    color: var(--blackColor);
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+                .price_seller{
+                    gap: 1rem;
+                    
+                    span{
+                        cursor: pointer;
+                        padding: .5rem 1rem;
+                        border-radius: 3px;
+                        font-weight: 600;
+                    }
+                    .price{
+                        background: var(--secondaryColor);
+                        color: var(--primaryColor);
+                    }
+                    .seller{
+                        background-color: var(--greyColor);
+                        color: var(--textColor);
+                    }
+                }
+                &:hover{
+                    transform: translateY(-7px);
+                    .imgDiv{
+                        border: 5px solid var(--primaryColor);
+                    }
+                }
+
+            }
+        }
+    }
+}

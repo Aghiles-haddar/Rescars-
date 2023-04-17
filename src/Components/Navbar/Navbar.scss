@@ -1,0 +1,224 @@
+:root{
+    --primaryColor: #fbe201;
+    --secondaryColor: #ebe8fc;
+    --textColor: #a3a3a3;
+    --greyColor: #f4f4f4;
+    --whiteColor: #f5f4fa;
+    --blackColor: #4343344;
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 6px rgb(237, 237, 237);
+    z-index: 1000;
+
+    .logoDiv{
+        .logo{
+            width: 25px;
+            transform: scale(3);
+        }
+    }
+
+    @media screen and (max-width:768px){
+        .navbar{
+            position: absolute;
+            background: var(--secondaryColor);
+            width: 80%;
+            top: -100rem;
+            right: 50%;
+            left: 50%;
+            transform: translate(-50%);
+            border-radius: 10px;
+            text-align: center;
+            padding: 2rem;
+            transition: .3s ease;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .closeIcons{
+                position: absolute;
+                bottom: -15px;
+                right: 50%;
+                left: 50%;
+                transform: translate(-50%);
+                background: var(--secondaryColor);
+                color: var(--primaryColor);
+                padding: 3px;
+                border-radius: 50%;
+                font-size: 35px;
+
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+
+        .menu{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+            .listItem{
+                padding: .5rem 1rem;
+                border-radius: 10px;
+                cursor: pointer;
+
+                a{
+                    font-size: 18px;
+                }
+                &:hover{
+                    background: var(--primaryColor);
+                    color: var(--whiteColor);
+                    transition: .3s ease;
+                }
+                &:hover a{
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+
+    .signUp{
+        gap: .7rem;
+        .text{
+            padding: 3px 10px;
+            background: var(--primaryColor);
+            border-radius: 3px;
+            color: var(--whiteColor);
+            cursor: pointer;
+            font-size: 14px;
+
+            &:hover{
+                background: var(--secondaryColor);
+                color: var(--blackColor)
+            }
+        }
+
+        .toggleNavbarIcon{
+            background: none;
+            color: var(--primaryColor);
+            font-weight: 600;
+            font-size: 25px;
+        }
+    }
+
+      .showNavbar{
+           top: 7rem;
+           transition: 0.5s ease;
+    }
+}
+
+.addBg{
+    background: var(--secondaryColor);
+    box-shadow: none;
+}
+
+// Media queries to make a navbar responsive
+
+@media screen and (min-width:520px){
+    .header{
+        .logoDiv{
+            img{
+                width: 30px;
+            }
+        }
+
+        .signUp{
+            .text{
+                padding: 6px;
+                font-size: 16px;
+            }
+
+            .toggleNavbarIcon{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:770px){
+    .header{
+        .navbar{
+            .closeIcon{
+                display: none;
+            }
+
+            .menu{
+                display: flex;
+                flex-direction: row;
+
+                .listItem{
+                    padding: .3rem 1rem;
+                    border-radius: 3px;
+
+                    a{
+                        color: var(--textColor);
+                        font-size: 15px;
+                    }
+
+                    &:hover{
+                        background: var(--primaryColor);
+                        color: var(--whiteColor);
+                        transition: .3s ease;
+                    }
+                    &:hover a{
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .signUp{
+            .text{
+                padding: 6px 10px;
+            }
+
+            .toggleNavbarIcon{
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:1064px){
+    .header{
+        padding: 2rem 7rem;
+        .navbar{
+            .menu{
+                .listItem{
+                    a{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .signUp{
+            .text{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:1400px){
+    .header{
+        .navbar{
+            .menu{
+                .listItem{
+                    margin: 0 .8rem;
+                }
+            }
+        }
+    }
+}
